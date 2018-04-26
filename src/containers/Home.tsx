@@ -11,42 +11,44 @@ import Chain from "@components/Chain";
 import Dapp from "@components/Dapp";
 import BuildDapp from "@components/BuildDapp";
 import Cta from "@components/Cta";
+import Popup from "@components/Popup"
 import styled from "styled-components";
 
 const MarketMainText = MarketText.extend`
   font-size: 25px;
-  
+
   @media ${device.mobileS} {
     font-size: 16px;
   }
   @media ${device.tablet} {
     font-size: 22px;
-  } 
+  }
   @media ${device.laptop} {
     font-size: 25px;
   }
-  
+
 `;
 
 const AboutWrapper = styled.section`
   padding: 50px;
-  
+
   @media ${device.mobileL} and (max-width: ${size.tablet}) {
     padding: 70px;
   }
-  
+
   @media ${device.tablet} {
     padding: 100px;
   }
-  
+
   @media ${device.laptopL} {
     padding: 150px;
   }
-   
+
 `;
 
 export default withSiteData(() => (
   <div>
+    <Popup/>
     <Hero/>
     <AboutWrapper>
       <MarketMainText>
