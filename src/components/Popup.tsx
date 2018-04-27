@@ -47,14 +47,27 @@ img{
 }`;
 
 class Popup extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      display: false
+    };
+  }
+  componentDidMount(){
+    setTimeout(function() {
+      this.setState({
+        display: True
+      }); }.bind(this), 30000);
+  }
   render() {
+
     return (
       <PopupArt  align="center">
         <Popuptext>Chat with us.</Popuptext>
         <Link to="https://t.me/Market_Protocol_Chat" target="_blank">
           <PopupButton type="primary">
             <PopupButtonText>
-              <img alt="telegram" src={telegram} width="10%" fill="#FFFFFF"/>
+              <img alt="telegram" src={telegram} height="100%" fill="#FFFFFF"/>
                 Join our Telegram.
             </PopupButtonText>
           </PopupButton>
